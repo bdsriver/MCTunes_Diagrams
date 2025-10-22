@@ -1,0 +1,10 @@
+sequenceDiagram
+   participant Jaquan
+   participant Recommendation System
+   participant Database
+
+   %% Jaquan requesting music that does not exist
+   Jaquan ->> Recommendation System: Apply filters like genre: rap, decade: 1880's
+   Recommendation System ->> Database: Query database using filters
+   Database ->> Recommendation System: Return empty table
+   Recommendation System ->>Jaquan: Returns empty page saying no songs could be found
