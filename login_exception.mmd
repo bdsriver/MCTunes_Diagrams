@@ -1,0 +1,17 @@
+sequenceDiagram
+   participant Jhustin
+   participant Attacker
+   participant Frontend
+   participant Backend
+
+   %% Attack
+   Attacker->>Frontend: Input Admin Login Credentials with Wrong Password
+   Frontend-->>Backend: Attempt to Validate Credentials
+   Backend-->>Frontend: Send Invalid Input Error
+   Frontend-->Attacker: Ask for Different Password
+
+   %% Attempt 2
+   Attacker->>Frontend: Input Login Credentials with Wrong Password Again
+   Frontend-->>Backend: Attempt to Validate Credentials
+   Backend-->>Frontend: Send Invalid Input Error
+   Frontend-->Attacker: Lock Attack from More Attempts
