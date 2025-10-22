@@ -1,0 +1,23 @@
+sequenceDiagram
+   participant Jhustin
+   participant Bhen
+   participant DeveloperFrontend
+   participant DeveloperServer
+
+   %% Step 1: Ask Developer to run tests
+   Jhustin->>Bhen: Request Feature Test
+
+   %% Step 2: Login to Developer Clone
+   Bhen->>DeveloperFrontend: Send Login Credentials
+   DeveloperFrontend-->>DeveloperServer: Validate Credentials
+   DeveloperServer-->>DeveloperFrontend: Confirm Validation
+   DeveloperFrontend-->Bhen: Send to Homepage
+
+   %% Step 3: Run Tests
+   Bhen->>DeveloperFrontend: Configure Test
+   DeveloperFrontend->>DeveloperServer: Send Test Details
+   DeveloperServer->>DeveloperFrontend: Send Test Results
+   DeveloperFrontend->>Bhen: Display Test Results
+
+   %% Step 4: Convey Results
+   Bhen-->>Jhustin: Convey Test Results
