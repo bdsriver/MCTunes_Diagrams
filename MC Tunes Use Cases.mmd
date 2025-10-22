@@ -1,0 +1,32 @@
+---
+config:
+  layout: fixed
+  themeVariables:
+    fontSize: 22.5px
+---
+flowchart TD
+ subgraph Actors["Actors"]
+        A1["Jhustin"]
+        A2["Bhen"]
+        A3["Jaquan"]
+        A4["Boris"]
+  end
+ subgraph System["MC Tunes System"]
+        UC2(("Use Case #2: User Feedback"))
+        UC3(("Use Case #3: Song Access"))
+        UC4(("Use Case #4: Adding/Removing User Permissions"))
+        UC6(("Use Case #6: Filtering"))
+        UC8(("Use Case #8: New Music"))
+        UC10(("Use Case #10: Fixing existing bugs"))
+        UC12(("Use Case #12: Update Songs Ratings"))
+        UC15(("Use Case #15: Developer Testing Environment"))
+        UC16(("Use Case #16: Developing user demanded features"))
+        UC20(("Use Case #20: Login Form"))
+  end
+    A1 --> UC4 & UC10 & UC15 & UC16 & UC20
+    A2 --> UC4 & UC6 & UC10 & UC15 & UC16 & UC20
+    A3 --> UC2 & UC3 & UC6 & UC8 & UC12 & UC20
+    A4 --> UC3 & UC6 & UC8 & UC12 & UC20
+    UC15 --> UC2 & UC4 & UC10 & UC16
+    UC20 --> UC3
+    UC3 --> UC6 & UC8 & UC12
