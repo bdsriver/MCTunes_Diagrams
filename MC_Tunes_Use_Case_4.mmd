@@ -1,0 +1,18 @@
+---
+config:
+  layout: dagre
+  themeVariables:
+    fontSize: 22.5px
+---
+flowchart TD
+ subgraph Actors["Actors"]
+        A1["Jhustin"]
+        A2["Bhen"]
+  end
+ subgraph System["MC Tunes System"]
+        UC4(("Use Case #4: Adding/Removing User Permissions"))
+        US7(("Story #2: Add/Remove User Permissions"))
+  end
+    A1 --> UC4
+    A2 --> UC4
+    UC4 --> US7
