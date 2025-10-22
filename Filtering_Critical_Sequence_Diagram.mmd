@@ -1,0 +1,20 @@
+sequenceDiagram
+   participant Jaquan
+   participant Boris
+   participant Bhen
+   participant Recommendation System
+
+   %% User Filtering and getting song recommendations ex. 1
+   Jaquan ->> Recommendation System: Apply Mood Filters 
+   Recommendation System ->>Jaquan: Return Recommended Songs based on mood
+   Jaquan->>Recommendation System: Return Feedback via user rating
+
+   %% User Filtering ex. 2
+   Boris->>Recommendation System: Apply Decade and genre filters
+   Recommendation System ->>Boris: Return Recommended Songs based on decade and genre
+   Boris->>Recommendation System: Return Feedback via user rating
+
+   %% Step 3: Devloping/testing the system
+   Bhen->>Recommendation System: Develop and train system to give accurate recommendations
+   Bhen->>Recommendation System: Test Filtering with fake users/preferences
+   Recommendation System->>Bhen: Provide accurate filtering recommendations
