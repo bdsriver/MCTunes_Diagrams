@@ -1,0 +1,17 @@
+sequenceDiagram
+   participant Jaquan
+   participant Jhustin
+   participant Frontend
+   participant Backend
+
+   %% Normal User login
+   Jaquan->>Frontend: Input Login Credentials
+   Frontend-->>Backend: Validate Credentials
+   Backend-->>Frontend: Confirm Validation
+   Frontend-->Jaquan: Send to Homepage
+
+   %% Admin Login
+   Jhustin->>Frontend: Input Login Credentials
+   Frontend-->>Backend: Validate Credentials
+   Backend-->>Frontend: Confirm Validation
+   Frontend-->Jhustin: Send to Homepage
