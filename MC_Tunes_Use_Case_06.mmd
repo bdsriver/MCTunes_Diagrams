@@ -1,0 +1,27 @@
+---
+config:
+  layout: dagre
+  themeVariables:
+    fontSize: 22.5px
+---
+flowchart TD
+ subgraph Actors["Actors"]
+        A1["Bhen"]
+        A2["Jhustin"]
+        A3['Boris]
+  end
+ subgraph System["MC Tunes System"]
+        UC6(("Use Case #6: Filtering"))
+        US4(("Story #4: Filter by decade"))
+        US14(("Story #14: Hybrid Recommendation engine"))
+        US15(("Story #15: Filter by Genre"))
+        US17(("Story 17: Age Appropriate Recommendations"))
+   
+  end
+    A1 --> UC6
+    A2 --> UC6
+    A3 --> UC6
+    UC6 --> US4
+    UC6 --> US14
+    UC6 --> US15
+    UC6 --> US17
