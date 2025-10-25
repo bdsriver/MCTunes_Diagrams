@@ -1,0 +1,21 @@
+---
+config:
+  layout: dagre
+  themeVariables:
+    fontSize: 22.5px
+---
+flowchart TD
+ subgraph Actors["Actors"]
+        A1["Bhen"]
+        A2["Jhustin"]
+  end
+ subgraph System["MC Tunes System"]
+        UC16(("Use Case #16: Developing user demanded features"))
+        US11(("Story #11: Dev Version of Website"))
+        US18(("Story #18: User Feedback"))
+   
+  end
+    A1 --> UC16
+    A2 --> UC16
+    UC16 --> US11
+    UC16 --> US18
