@@ -1,0 +1,25 @@
+---
+config:
+  layout: dagre
+  themeVariables:
+    fontSize: 22.5px
+---
+flowchart TD
+ subgraph Actors["Actors"]
+        A1["Bhen"]
+        A2["Jaquan"]
+        A3["Boris"]
+  end
+ subgraph System["MC Tunes System"]
+        UC8(("Use Case #8: New Music"))
+        US3(("Story #3: New Release"))
+        US12(("Story 12: Link To Song"))
+        US14(("Story #14: Hybrid Recommendation engine"))
+   
+  end
+    A1 --> UC8
+    A2 --> UC8
+    A3 --> UC8
+    UC8 --> US3
+    UC8 --> US12
+    UC8 --> US14

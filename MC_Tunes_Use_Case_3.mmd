@@ -11,10 +11,16 @@ flowchart TD
   end
  subgraph System["MC Tunes System"]
         UC3(("Use Case #3: Song Access"))
+        UC6(("Use Case #6: Filtering"))
+        UC8(("Use Case #8: New Music"))
+        UC12(("Use Case #12: Update Songs Ratings"))
         US7(("Story #12: Link to Song"))
         US18(("Story #19: 5 Second Snippet"))
   end
     A1 --> UC3
     A2 --> UC3
+    UC3 --> UC6
+    UC3 --> UC8
+    UC3 --> UC12
     UC3 --> US7
     UC3 --> US18
